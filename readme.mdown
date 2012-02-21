@@ -7,7 +7,7 @@ Key Features
 ==============================
 
 - Bootstrap, from Twitter built-in (http://twitter.github.com/bootstrap/)
-
+- RESTful API module, which returns responses in JSON or XML formats
 
 The project requires:
 ==============================
@@ -23,6 +23,7 @@ The following is a sample VHOST you might want to consider for your project.
     <VirtualHost *:80>
        DocumentRoot "/var/zfbase/public"
        ServerName zfbase.dev
+       ServerAlias *.zfbase.dev
     
        # This should be omitted in the production environment
        SetEnv APPLICATION_ENV development

@@ -19,11 +19,20 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
 	protected function _initModules()
 	{
-		$front = Zend_Controller_Front::getInstance();
-		$front->addModuleDirectory(APPLICATION_PATH . '/modules');
-		
 		$frontController = Zend_Controller_Front::getInstance();
-	
+		$frontController->addModuleDirectory(APPLICATION_PATH . '/modules');
+		
+		$options = $this->getOptions();
+		$systemDomainName = $options['system']['domain'];
+		
+		// our api is located at api.domainname.com
+		if ( ($_SERVER['HTTP_HOST'] == 'api.' . $systemDomainName)) {
+			$frontController->setDefaultModule('api');
+		
+			$restRoute = new Zend_Rest_Route($frontController);
+			$frontController->getRouter()->addRoute('default', $restRoute);
+		}
+			
 	}
 	
 }
