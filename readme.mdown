@@ -1,0 +1,37 @@
+README
+======
+
+This project provides a simple base starting point for using zend framework
+
+Key Features
+==============================
+
+- Bootstrap, from Twitter built-in (http://twitter.github.com/bootstrap/)
+
+
+The project requires:
+==============================
+
+* Zend Framework 1.11+ (http://framework.zend.com/)
+
+
+Setting Up Your VHOST
+==============================
+
+The following is a sample VHOST you might want to consider for your project.
+
+    <VirtualHost *:80>
+       DocumentRoot "/var/zfbase/public"
+       ServerName zfbase.dev
+    
+       # This should be omitted in the production environment
+       SetEnv APPLICATION_ENV development
+    
+       <Directory "/var/zfbase/public">
+           Options Indexes MultiViews FollowSymLinks
+           AllowOverride All
+           Order allow,deny
+           Allow from all
+       </Directory>
+    
+    </VirtualHost>
