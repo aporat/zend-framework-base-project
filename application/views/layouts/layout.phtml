@@ -1,0 +1,60 @@
+<?php 
+echo $this->doctype() . "\n" ;
+?>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<?php 
+$this->headLink()->prependStylesheet($this->baseUrl('/media/css/style.css'));
+$this->headLink()->prependStylesheet($this->baseUrl('/media/css/bootstrap.min.css'));
+
+$this->headScript()->prependFile('/media/js/bootstrap.min.js');
+$this->headScript()->prependFile('//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+?>
+<?php 
+echo $this->headTitle() . "\n";
+echo $this->headMeta()  . "\n";
+echo $this->headLink() . "\n";
+echo $this->headScript(). "\n";
+?>		
+
+  </head>
+  <body>
+<?php echo $this->partial('partial/navbar.phtml') ?>
+  <div class="container">
+<?php echo $this->layout()->content ?>
+  </div> 
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="row">
+              <div class="span3">
+                <h4>Product</h4>
+                <ul class="unstyled">
+                  <li><a href="/">Home</a></li>
+                </ul>
+              </div>
+              <div class="span3">
+                <h4>More</h4>
+                <ul class="unstyled">
+                  <li><a href="#">About us</a></li>
+                </ul>
+              </div>
+              <div class="span6">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+  </body>
+</html>
