@@ -22,6 +22,10 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		$frontController = Zend_Controller_Front::getInstance();
 		$frontController->addModuleDirectory(APPLICATION_PATH . '/modules');
 		$frontController->setParam('prefixDefaultModule', true);
+
+		
+		$frontController->registerPlugin(new Application_Controller_Plugin_ModuleLoader());
+		
 		
 		$options = $this->getOptions();
 		$systemDomainName = $options['system']['domain'];

@@ -1,0 +1,16 @@
+<div class="offset2">
+  <div class="span2"><h2>Sign In</h2></div>
+  <div class="alternative" style="margin-left: 185px">
+    No account yet? &nbsp;
+    <a href="<?php echo $this->portalUrl('signup', 'users')?>">Sign up</a>
+  </div>
+</div>
+
+<div class="offset2 span6 well form-container">
+  <?php echo $this->partial('partial/flash-message.phtml', array('type' => 'error', 'errors' => $this->errors)) ?>
+  <?php echo $this->form; ?>
+</div>
+
+<div class="offset2 span6">
+<a href="<?php echo $this->portalUrl('forgot-password', 'users')?>">Forgot your password?</a>
+</div>
