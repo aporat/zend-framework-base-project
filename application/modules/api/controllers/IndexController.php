@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Application_Rest_Controller
+class API_IndexController extends Application_Rest_Controller
 {
 	public function init()
 	{

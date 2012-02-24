@@ -1,6 +1,6 @@
 <?php
 
-class ErrorController extends Application_Rest_Controller
+class API_ErrorController extends Application_Rest_Controller
 {
 	public function getAction() 
 	{
