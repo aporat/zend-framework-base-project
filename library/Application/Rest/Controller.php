@@ -107,7 +107,7 @@ abstract class Application_Rest_Controller extends Zend_Rest_Controller
 			}
  
 			// replace anything not alpha numeric
-			$key = preg_replace('/[^a-z]/i', '', $key);
+			$key = preg_replace('/[^a-z_]/i', '', $key);
  
 			// if there is another array found recrusively call this function
 			if (is_array($value)) {
