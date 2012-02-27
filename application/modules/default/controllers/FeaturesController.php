@@ -1,6 +1,6 @@
 <?php
 
-class Default_IndexController extends Application_Controller
+class Default_FeaturesController extends Application_Controller
 {
 
     public function init()

@@ -5,6 +5,12 @@ class Default_ErrorController extends Zend_Controller_Action
 
     public function errorAction()
     {
+    	$helper = new Application_View_Helper_SecureUrl;
+    	$this->view->registerHelper($helper, 'secureUrl');
+    	
+    	$this->_helper->layout->setLayout('layout-error');
+    	$this->view->addScriptPath(APPLICATION_PATH . '/views/');
+    	
         $errors = $this->_getParam('error_handler');
         
         if (!$errors || !$errors instanceof ArrayObject) {

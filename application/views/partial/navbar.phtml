@@ -8,9 +8,10 @@
           </a>
           <a class="brand" href="/">ZFBase</a>
           <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
-            </ul>
+<?php 
+$this->navigation()->menu()->setUlClass('nav');
+echo $this->navigation()->menu()->render();
+?>
           </div>
         </div>
       </div>

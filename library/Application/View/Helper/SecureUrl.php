@@ -95,14 +95,17 @@ class Application_View_Helper_SecureUrl extends Zend_View_Helper_Url
 		return $this;
 	}
 	
-	/**
-	 * creates an url link
-	 * 
-	 * @param string $action
-	 * @param string $controller
-	 * @param array $args
-	 */
-    public function securePortalUrl($action = 'index', $controller = 'index', $args = array())
+    /**
+     * Generates an url given the name of a route.
+     *
+     * @access public
+     *
+     * @param  array $urlOptions Options passed to the assemble method of the Route object.
+     * @param  mixed $name The name of a Route to use. If null it will use the current Route
+     * @param  bool $reset Whether or not to reset the route defaults with those provided
+     * @return string Url for the link href attribute.
+     */
+    public function secureUrl(array $urlOptions = array(), $name = null, $reset = false, $encode = true)
     {
     	$config = Zend_Registry::get('config');
     	
@@ -112,16 +115,7 @@ class Application_View_Helper_SecureUrl extends Zend_View_Helper_Url
     		$this->setScheme('http');
     	}
     	
-    	$_args = array_merge($args, array(
-    		'action' => $action,
-    		'controller' => $controller
-    	));
-    	
-    	return $this->getScheme() . '://' . $this->getHost() . parent::url(
-    		$_args,
-    		null,
-    		true
-    	);
+    	return $this->getScheme() . '://' . $this->getHost() . parent::url($urlOptions, $name, $reset, $encode);
     }
     
 
