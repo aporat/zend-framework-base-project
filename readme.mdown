@@ -22,8 +22,10 @@ Inital Project Setup
 1. Setup your hosts file with the sample hosts:
 
 `
-127.0.0.1 zfbase.dev
-127.0.0.1 api.zfbase.dev
+`
+`127.0.0.1 zfbase.dev
+`127.0.0.1 api.zfbase.dev
+`
 `
  
 1. The following is a VHOST you might want to consider for your project.
