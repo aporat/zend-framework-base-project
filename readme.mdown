@@ -22,16 +22,18 @@ Inital Project Setup
 1. Setup your hosts file with the sample hosts:
 
 `
-`
-`127.0.0.1 zfbase.dev
-`127.0.0.1 api.zfbase.dev
-`
-`
+
+      127.0.0.1 zfbase.dev
+      127.0.0.1 api.zfbase.dev
+
+
  
 1. The following is a VHOST you might want to consider for your project.
 
+
 `
-   <VirtualHost *:80>
+
+    <VirtualHost *:80>
        DocumentRoot "/var/zfbase/public"
        ServerName zfbase.dev
        ServerAlias *.zfbase.dev
@@ -45,8 +47,9 @@ Inital Project Setup
            Order allow,deny
            Allow from all
        </Directory>
-    
-    </VirtualHost>
-`
+
+     </VirtualHost>
+
+
 
 1. Run docs/db-schema.sql on your mysql local instance
