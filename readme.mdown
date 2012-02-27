@@ -19,7 +19,7 @@ Inital Project Setup
 ==============================
 
 
-1. Setup your hosts file with the sample hosts:
+* Setup your hosts file with the sample hosts:
 
 `
 
@@ -28,7 +28,7 @@ Inital Project Setup
 
 
  
-1. The following is a VHOST you might want to consider for your project.
+* The following is a VHOST you might want to consider for your project.
 
 
 `
@@ -52,4 +52,4 @@ Inital Project Setup
 
 
 
-1. Run docs/db-schema.sql on your mysql local instance
+* Run docs/db-schema.sql on your mysql local instance
