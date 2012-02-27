@@ -45,7 +45,7 @@ CREATE TABLE `changelog` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sessions`
+-- Table structure for table `session`
 --
 
 DROP TABLE IF EXISTS `session`;
